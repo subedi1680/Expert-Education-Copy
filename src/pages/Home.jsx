@@ -10,6 +10,7 @@ import Australia_flag from "../assets/au.svg";
 import Canada_flag from "../assets/ca.svg";
 import USA_flag from "../assets/us.svg";
 import UK_flag from "../assets/gb.svg";
+import Global_branches from "../assets/EEVS-Global-Branches-Map.png";
 
 function Home() {
   return (
@@ -167,70 +168,125 @@ function Home() {
         </div>
         <div className="mt-5 text-[#575656]">Choose your study destination</div>
         <div className="flex flex-col md:flex-row justify-between mt-12 md:mt-15 space-y-9">
-            {/* Australia */}
-            <div className="flex flex-col shadow-gray-300 shadow-xl w-[92.5vw] md:w-[17.65vw] h-117 md:h-108 md:rounded-2xl rounded-xl">
-              <img
-                src={Australia_abroad}
-                className="w-[92.5vw] h-60 md:w-80 md:h-45 rounded-t-xl"
-              ></img>
-              <img
-                src={Australia_flag}
-                className="absolute w-15   h-15 object-cover rounded-full border-5 border-white mt-48 ml-68 md:mt-33 md:ml-45  shadow-gray-300 shadow-sm"
-              ></img>
-              <p className="text-[#344871] text-2xl font-bold mt-6 md:mt-8 mx-7 hover:text-[#1877F2] cursor-pointer">
-                Study in Australia
-              </p>
-              <p className="text-[#585656] font-2 mt-2 md:mt-3 mx-7">
-                Widen your career scope by studying in Australia in some of the
-                top most globally ranked universities.
-              </p>
-              <p className="mt-2.5 mx-7 text-[#1877F2] underline hover:text-[#3e5b95] cursor-pointer">Learn More</p>
+          {/* Australia */}
+          <div className="flex flex-col shadow-gray-300 shadow-xl w-[92.5vw] md:w-[17.65vw] h-117 md:h-108 md:rounded-2xl rounded-xl">
+            <img
+              src={Australia_abroad}
+              className="w-[92.5vw] h-60 md:w-80 md:h-45 rounded-t-xl"
+            ></img>
+            <img
+              src={Australia_flag}
+              className="absolute w-15   h-15 object-cover rounded-full border-5 border-white mt-48 ml-68 md:mt-33 md:ml-45  shadow-gray-300 shadow-sm"
+            ></img>
+            <p className="text-[#344871] text-2xl font-bold mt-6 md:mt-8 mx-7 hover:text-[#1877F2] cursor-pointer">
+              Study in Australia
+            </p>
+            <p className="text-[#585656] font-2 mt-2 md:mt-3 mx-7">
+              Widen your career scope by studying in Australia in some of the
+              top most globally ranked universities.
+            </p>
+            <p className="mt-2.5 mx-7 text-[#1877F2] underline hover:text-[#3e5b95] cursor-pointer">
+              Learn More
+            </p>
+          </div>
+          {/* Canada */}
+          <div className="flex flex-col shadow-gray-300 shadow-xl w-[92.5vw] md:w-[17.65vw] h-108 md:rounded-2xl rounded-xl">
+            <img
+              src={Canada_abroad}
+              className="w-[92.5vw] h-60 md:w-80 md:h-45 rounded-t-xl"
+            ></img>
+            <img
+              src={Canada_flag}
+              className="absolute w-15   h-15 object-cover rounded-full border-5 border-white mt-48 ml-68 md:mt-33 md:ml-45  shadow-gray-300 shadow-sm"
+            ></img>
+            <p className="text-[#344871] text-2xl font-bold mt-6 md:mt-8 mx-7 hover:text-[#1877F2] cursor-pointer">
+              Study in Canada
+            </p>
+            <p className="text-[#585656] font-2 mt-2 md:mt-3 mx-7">
+              Enjoy quality education and an affordable fee structure while
+              pursuing your studies in Canada.
+            </p>
+            <p className="mt-2.5 mx-7 text-[#1877F2] underline hover:text-[#3e5b95] cursor-pointer">
+              Learn More
+            </p>
+          </div>
+          {/* USA */}
+          <div className="flex flex-col shadow-gray-300 shadow-xl w-[92.5vw] md:w-[17.65vw] h-108 md:rounded-2xl rounded-xl">
+            <img
+              src={USA_abroad}
+              className="w-[92.5vw] h-60 md:w-80 md:h-45 rounded-t-xl"
+            ></img>
+            <img
+              src={USA_flag}
+              className="absolute w-15   h-15 object-cover rounded-full border-5 border-white mt-48 ml-68 md:mt-33 md:ml-45  shadow-gray-300 shadow-sm"
+            ></img>
+            <p className="text-[#344871] text-2xl font-bold mt-6 md:mt-8 mx-7 hover:text-[#1877F2] cursor-pointer">
+              Study in USA
+            </p>
+            <p className="text-[#585656] font-2 mt-2 md:mt-3 mx-7">
+              Experience academic excellence with the world’s most advanced
+              internet and technology structure in the US.
+            </p>
+            <p className="mt-2.5 mx-7 text-[#1877F2] underline hover:text-[#3e5b95] cursor-pointer">
+              Learn More
+            </p>
+          </div>
+          {/* UK */}
+          <div className="flex flex-col shadow-gray-300 shadow-xl w-[92.5vw] md:w-[17.65vw] h-108 md:rounded-2xl rounded-xl">
+            <img
+              src={UK_abroad}
+              className="w-[92.5vw] h-60 md:w-80 md:h-45 rounded-t-xl"
+            ></img>
+            <img
+              src={UK_flag}
+              className="absolute w-15   h-15 object-cover rounded-full border-5 border-white mt-48 ml-68 md:mt-33 md:ml-45  shadow-gray-300 shadow-sm"
+            ></img>
+            <p className="text-[#344871] text-2xl font-bold mt-6 md:mt-8 mx-7 hover:text-[#1877F2] cursor-pointer">
+              Study in UK
+            </p>
+            <p className="text-[#585656] font-2 mt-2 md:mt-3 mx-7">
+              Plenty of research facilities and even more opportunities to
+              explore your career options in the UK.
+            </p>
+            <p className="mt-2.5 mx-7 text-[#1877F2] underline hover:text-[#3e5b95] cursor-pointer">
+              Learn More
+            </p>
+          </div>
+        </div>
+      </div>
+      {/* world map section */}
+      <div className="bg-[#344871] text-white">
+        <div className="flex flex-col h-[94vh] w-295 mx-42 items-center">
+          <div className="flex flex-row mt-20 p-2 mb-11">
+            <div className="flex flex-col">
+              <div className="text-5xl font-bold">Accelerating your academic growth overseas</div>
+              <div className="mt-8 text-[1.09em]">
+                Our education consultants can support with excellence in
+                guidance with education and visa consultancy in Nepal. We’ve
+                been growing since 2003 with over 80+ branches across 23
+                countries. You can enjoy a wide range of services for fulfilling
+                your dreams to study in Australia, the UK, Canada and the US.
+              </div>
             </div>
-            {/* Canada */}
-            <div className="flex flex-col shadow-gray-300 shadow-xl w-[92.5vw] md:w-[17.65vw] h-108 md:rounded-2xl rounded-xl">
-              <img src={Canada_abroad} className="w-[92.5vw] h-60 md:w-80 md:h-45 rounded-t-xl"></img>
-              <img
-                src={Canada_flag}
-                className="absolute w-15   h-15 object-cover rounded-full border-5 border-white mt-48 ml-68 md:mt-33 md:ml-45  shadow-gray-300 shadow-sm"
-              ></img>
-              <p className="text-[#344871] text-2xl font-bold mt-6 md:mt-8 mx-7 hover:text-[#1877F2] cursor-pointer">
-                Study in Canada
-              </p>
-              <p className="text-[#585656] font-2 mt-2 md:mt-3 mx-7">
-                Enjoy quality education and an affordable fee structure while pursuing your studies in Canada.
-              </p>
-              <p className="mt-2.5 mx-7 text-[#1877F2] underline hover:text-[#3e5b95] cursor-pointer">Learn More</p>
+            <div>
+              <img src={Global_branches} className="w-570  h-280.04"></img>
             </div>
-            {/* USA */}
-            <div className="flex flex-col shadow-gray-300 shadow-xl w-[92.5vw] md:w-[17.65vw] h-108 md:rounded-2xl rounded-xl">
-              <img src={USA_abroad} className="w-[92.5vw] h-60 md:w-80 md:h-45 rounded-t-xl"></img>
-              <img
-                src={USA_flag}
-                className="absolute w-15   h-15 object-cover rounded-full border-5 border-white mt-48 ml-68 md:mt-33 md:ml-45  shadow-gray-300 shadow-sm"
-              ></img>
-              <p className="text-[#344871] text-2xl font-bold mt-6 md:mt-8 mx-7 hover:text-[#1877F2] cursor-pointer">
-                Study in USA
-              </p>
-              <p className="text-[#585656] font-2 mt-2 md:mt-3 mx-7">
-                Experience academic excellence with the world’s most advanced internet and technology structure in the US.
-              </p>
-              <p className="mt-2.5 mx-7 text-[#1877F2] underline hover:text-[#3e5b95] cursor-pointer">Learn More</p>
+          </div>
+          <hr className="border-[#768299] w-300"></hr>
+          <div className="flex flex-row justify-between gap-x-50 mt-10">
+            <div className="flex flex-col items-center">
+              <p className="text-[#abb2c0] font-semibold text-[0.8em]">INTERNATIONAL STUDENTS</p><p className="text-[#abb2c0] font-semibold text-[0.8em]">ASSISTED</p>
+              <p className="text-5xl font-bold">150,000+</p>
             </div>
-            {/* UK */}
-            <div className="flex flex-col shadow-gray-300 shadow-xl w-[92.5vw] md:w-[17.65vw] h-108 md:rounded-2xl rounded-xl">
-              <img src={UK_abroad} className="w-[92.5vw] h-60 md:w-80 md:h-45 rounded-t-xl"></img>
-              <img
-                src={UK_flag}
-                className="absolute w-15   h-15 object-cover rounded-full border-5 border-white mt-48 ml-68 md:mt-33 md:ml-45  shadow-gray-300 shadow-sm"
-              ></img>
-              <p className="text-[#344871] text-2xl font-bold mt-6 md:mt-8 mx-7 hover:text-[#1877F2] cursor-pointer">
-                Study in UK
-              </p>
-              <p className="text-[#585656] font-2 mt-2 md:mt-3 mx-7">
-                Plenty of research facilities and even more opportunities to explore your career options in the UK.
-              </p>
-              <p className="mt-2.5 mx-7 text-[#1877F2] underline hover:text-[#3e5b95] cursor-pointer">Learn More</p>
+            <div className="flex flex-col items-center">
+              <p className="text-[#abb2c0] font-semibold text-[0.8em]">SCHOLARSHIPS </p><p className="text-[#abb2c0] font-semibold text-[0.8em]"> APPROVED</p>
+              <p className="text-5xl font-bold">22,000+</p>
             </div>
+            <div className="flex flex-col items-center">
+              <p className="text-[#abb2c0] font-semibold text-[0.8em]">ENROLLED IN</p><p className="text-[#abb2c0] font-semibold text-[0.8em]"> IELTS/PTE PREPARATION CLASSES</p>
+              <p className="text-5xl font-bold">40,000+</p>
+            </div>
+          </div>
         </div>
       </div>
     </>
