@@ -255,11 +255,13 @@ function Home() {
         </div>
       </div>
       {/* world map section */}
-      <div className="bg-[#344871] text-white">
-        <div className="flex flex-col h-[94vh] w-295 mx-42 items-center">
-          <div className="flex flex-row mt-20 p-2 mb-11">
+      <div className="bg-[#344871] text-white pb-30">
+        <div className="flex flex-col md:h-[94vh] md:w-295 md:mx-42 items-center mt-12.5 mx-3.5">
+          <div className="flex flex-col md:flex-row mt-10 md:mt-20 p-2 mb-11">
             <div className="flex flex-col">
-              <div className="text-5xl font-bold">Accelerating your academic growth overseas</div>
+              <div className="text-3xl md:text-5xl font-bold">
+                Accelerating your academic growth overseas
+              </div>
               <div className="mt-8 text-[1.09em]">
                 Our education consultants can support with excellence in
                 guidance with education and visa consultancy in Nepal. We’ve
@@ -268,23 +270,46 @@ function Home() {
                 your dreams to study in Australia, the UK, Canada and the US.
               </div>
             </div>
-            <div>
+            <div className="mt-10 md:mt-0">
               <img src={Global_branches} className="w-570  h-280.04"></img>
             </div>
           </div>
-          <hr className="border-[#768299] w-300"></hr>
-          <div className="flex flex-row justify-between gap-x-50 mt-10">
+          <hr className="border-[#768299] w-[90vw] md:w-300"></hr>
+          <div className="flex flex-col md:flex-row justify-between md:gap-x-50 mt-10 gap-y-13 md:gap-y-0">
             <div className="flex flex-col items-center">
-              <p className="text-[#abb2c0] font-semibold text-[0.8em]">INTERNATIONAL STUDENTS</p><p className="text-[#abb2c0] font-semibold text-[0.8em]">ASSISTED</p>
-              <p className="text-5xl font-bold">150,000+</p>
+              <div className="flex flex-row md:flex-col items-center">
+                <p className="text-[#abb2c0] font-semibold text-[0.8em]">
+                  INTERNATIONAL STUDENTS
+                </p>
+                <p className="text-[#abb2c0] font-semibold text-[0.8em]">
+                  ASSISTED
+                </p>
+              </div>
+              <p className="md:text-5xl font-bold text-3xl">150,000+</p>
             </div>
             <div className="flex flex-col items-center">
-              <p className="text-[#abb2c0] font-semibold text-[0.8em]">SCHOLARSHIPS </p><p className="text-[#abb2c0] font-semibold text-[0.8em]"> APPROVED</p>
-              <p className="text-5xl font-bold">22,000+</p>
+              <div className="flex flex-row md:flex-col items-center">
+                <p className="text-[#abb2c0] font-semibold text-[0.8em]">
+                  SCHOLARSHIPS{" "}
+                </p>
+                <p className="text-[#abb2c0] font-semibold text-[0.8em]">
+                  {" "}
+                  APPROVED
+                </p>
+              </div>
+              <p className="md:text-5xl font-bold text-3xl">22,000+</p>
             </div>
             <div className="flex flex-col items-center">
-              <p className="text-[#abb2c0] font-semibold text-[0.8em]">ENROLLED IN</p><p className="text-[#abb2c0] font-semibold text-[0.8em]"> IELTS/PTE PREPARATION CLASSES</p>
-              <p className="text-5xl font-bold">40,000+</p>
+              <div className="flex flex-row md:flex-col items-center">
+              <p className="text-[#abb2c0] font-semibold text-[0.8em]">
+                ENROLLED IN
+              </p>
+              <p className="text-[#abb2c0] font-semibold text-[0.8em]">
+                {" "}
+                IELTS/PTE PREPARATION CLASSES
+              </p>
+              </div>
+              <p className="md:text-5xl font-bold text-3xl">40,000+</p>
             </div>
           </div>
         </div>
