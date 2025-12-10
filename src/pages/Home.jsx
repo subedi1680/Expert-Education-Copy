@@ -255,7 +255,7 @@ function Home() {
         </div>
       </div>
       {/* world map section */}
-      <div className="bg-[#344871] text-white pb-30">
+      <div className="bg-[#344871] text-white pb-30 md:pb-0">
         <div className="flex flex-col md:h-[94vh] md:w-295 md:mx-42 items-center mt-12.5 mx-3.5">
           <div className="flex flex-col md:flex-row mt-10 md:mt-20 p-2 mb-11">
             <div className="flex flex-col">
