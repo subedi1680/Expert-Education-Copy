@@ -1,16 +1,27 @@
 import expertLogo from "../assets/expert_logo.png";
 import { Search } from "lucide-react";
 import { CircleChevronRight } from "lucide-react";
+import { Menu } from "lucide-react";
+import Australia_abroad from "../assets/study-abroad-in-australia-800x533.jpg";
+import Canada_abroad from "../assets/Study-abroad-in-canada-800x533.jpg";
+import USA_abroad from "../assets/Study-abroad-in-USA-800x533.jpg";
+import UK_abroad from "../assets/Study-abroad-in-uk-800x533.jpg";
+import Australia_flag from "../assets/au.svg";
+import Canada_flag from "../assets/ca.svg";
+import USA_flag from "../assets/us.svg";
+import UK_flag from "../assets/gb.svg";
+
 function Home() {
   return (
     <>
-      <div className="bg-[url(assets/home_expert_image.png)] bg-cover bg-center h-[600px] flex flex-col backdrop-blur-3xl w-full">
-        <nav className="flex flex-wrap justify-between border-b border-[#3A52B0] px-10">
-          <div className="my-3 mx-3">
+      {/* nav bar and background image */}
+      <div className="relative bg-[url(assets/home_expert_image.png)] bg-cover bg-center h-[450px] md:h-[600px] flex flex-col backdrop-blur-3xl md:w-full z-10">
+        <nav className="flex flex-wrap justify-between border-b border-[#3A52B0] pl-10 pr-4 md:px-10">
+          <div className="my-3 -mx-6 md:mx-3">
             <img src={expertLogo} className="h-15 "></img>
           </div>
           <div className="px-11 flex-1">
-            <ul className="space-x-1 flex flex-row text-white text-sm font-bold justify-end">
+            <ul className="hidden space-x-1 md:flex flex-row text-white text-sm font-bold justify-end">
               <li className="group hover:bg-[#186FE9] cursor-pointer px-2.75 py-8 duration-200 relative">
                 <span>ABOUT US</span>
                 <ul className="absolute top-full left-0 hidden group-hover:flex flex-col bg-white text-[#4b5c81] w-63 text-md font-medium">
@@ -74,7 +85,6 @@ function Home() {
                   <li className="px-4 py-4 hover:bg-[#2165D6] hover:text-white cursor-pointer border-b border-gray-200">
                     Partner Visa
                   </li>
-                  
                 </ul>
               </li>
               <li className="hover:bg-[#186FE9] cursor-pointer px-2.75 py-8 duration-200">
@@ -99,28 +109,39 @@ function Home() {
               </li>
             </ul>
           </div>
-          <div className="flex items-center border-l border-[#3A52B0] pl-10 pr-1">
+          <div className="md:flex hidden items-center border-l border-[#3A52B0] pl-10 pr-1">
             <Search color="white" />
           </div>
+          <div className="flex md:hidden items-center">
+            <Menu color="white" strokeWidth="2" size="30" />
+          </div>
         </nav>
-        <div className="flex flex-col mt-12 ml-30 text-white">
-          <div className="underline underline-offset-10 decoration-1 font-extrabold text-sm tracking-[.5em]">
+        <div className="flex flex-col mt-20 md:mt-12 ml-7 md:ml-30 text-white">
+          <div className="underline underline-offset-8  md:underline-offset-10 decoration-1 font-extrabold text-sm md:tracking-[.5em] tracking-[.25em]">
             EXPERT EDUCATION
           </div>
-          <div className="text-5xl font-bold mt-9">Explore your</div>
-          <div className="text-5xl font-bold mt-2">Dreams Overseas</div>
+          <div className="text-4xl md:text-5xl font-bold mt-3 md:mt-9 tracking-[0.06em] md:tracking-[0em]">
+            Explore your
+          </div>
+          <div className="text-4xl md:text-5xl font-bold md:mt-2 tracking-[0.07em] md:tracking-[0em]">
+            Dreams Overseas
+          </div>
           <div className="flex flex-row justify-start items-center text-md mt-3 space-x-1">
-            <div>
+            <div className="hidden md:flex">
               <CircleChevronRight strokeWidth="1" size="40" />
             </div>
-            <div className="font-semibold tracking-widest">
+            <div className="flex md:hidden">
+              <CircleChevronRight strokeWidth="1" size="25" />
+            </div>
+            <div className="font-semibold md:tracking-widest text-[12px] md:text-[16px]">
               Discover your options
             </div>
           </div>
         </div>
       </div>
-      <div className="flex flex-col justify-between items-center text-[21px] text-white bg-[#1877F2] ">
-        <div className="w-[76vw] pt-17.5">
+      {/* consultancy descrive text */}
+      <div className=" relative flex flex-col justify-between items-center text-[21px]/8.25 text-white bg-[#1877F2] z-20 -mt-[72px] md:mt-0">
+        <div className="px-[15px] text-balance md:w-[76vw] pt-17.5">
           We provide students with the {""}
           <span className="hover:text-[#324B78] hover:cursor-pointer duration-300">
             <b>best consultancy in Nepal</b>
@@ -131,12 +152,85 @@ function Home() {
           <b>600 education institutions</b> in Australia, Canada, the UK and the
           US to guide your way to the college or university you prefer.
         </div>
-        <div className="w-[76vw] mt-5 mb-17.5">
+        <div className="px-[15px] text-balance md:w-[76vw] mt-5 mb-17.5">
           It is time to take a step in the right direction with Expert
           Education, your reliable and{" "}
           <span className="hover:text-[#324B78] hover:cursor-pointer duration-300">
             top education consultancy in Nepal.
           </span>
+        </div>
+      </div>
+      {/* study in countries cards */}
+      <div className="flex flex-col md:my-17 md:w-295 md:ml-40 my-12.5 ml-3.5">
+        <div className="text-[#344871] text-[34px]/10 md:text-[45px] font-bold">
+          Your academic goals are waiting to be achieved
+        </div>
+        <div className="mt-5 text-[#575656]">Choose your study destination</div>
+        <div className="flex flex-col md:flex-row justify-between mt-12 md:mt-15 space-y-9">
+            {/* Australia */}
+            <div className="flex flex-col shadow-gray-300 shadow-xl w-[92.5vw] md:w-[17.65vw] h-117 md:h-108 md:rounded-2xl rounded-xl">
+              <img
+                src={Australia_abroad}
+                className="w-[92.5vw] h-60 md:w-80 md:h-45 rounded-t-xl"
+              ></img>
+              <img
+                src={Australia_flag}
+                className="absolute w-15   h-15 object-cover rounded-full border-5 border-white mt-48 ml-68 md:mt-33 md:ml-45  shadow-gray-300 shadow-sm"
+              ></img>
+              <p className="text-[#344871] text-2xl font-bold mt-6 md:mt-8 mx-7 hover:text-[#1877F2] cursor-pointer">
+                Study in Australia
+              </p>
+              <p className="text-[#585656] font-2 mt-2 md:mt-3 mx-7">
+                Widen your career scope by studying in Australia in some of the
+                top most globally ranked universities.
+              </p>
+              <p className="mt-2.5 mx-7 text-[#1877F2] underline hover:text-[#3e5b95] cursor-pointer">Learn More</p>
+            </div>
+            {/* Canada */}
+            <div className="flex flex-col shadow-gray-300 shadow-xl w-[92.5vw] md:w-[17.65vw] h-108 md:rounded-2xl rounded-xl">
+              <img src={Canada_abroad} className="w-[92.5vw] h-60 md:w-80 md:h-45 rounded-t-xl"></img>
+              <img
+                src={Canada_flag}
+                className="absolute w-15   h-15 object-cover rounded-full border-5 border-white mt-48 ml-68 md:mt-33 md:ml-45  shadow-gray-300 shadow-sm"
+              ></img>
+              <p className="text-[#344871] text-2xl font-bold mt-6 md:mt-8 mx-7 hover:text-[#1877F2] cursor-pointer">
+                Study in Canada
+              </p>
+              <p className="text-[#585656] font-2 mt-2 md:mt-3 mx-7">
+                Enjoy quality education and an affordable fee structure while pursuing your studies in Canada.
+              </p>
+              <p className="mt-2.5 mx-7 text-[#1877F2] underline hover:text-[#3e5b95] cursor-pointer">Learn More</p>
+            </div>
+            {/* USA */}
+            <div className="flex flex-col shadow-gray-300 shadow-xl w-[92.5vw] md:w-[17.65vw] h-108 md:rounded-2xl rounded-xl">
+              <img src={USA_abroad} className="w-[92.5vw] h-60 md:w-80 md:h-45 rounded-t-xl"></img>
+              <img
+                src={USA_flag}
+                className="absolute w-15   h-15 object-cover rounded-full border-5 border-white mt-48 ml-68 md:mt-33 md:ml-45  shadow-gray-300 shadow-sm"
+              ></img>
+              <p className="text-[#344871] text-2xl font-bold mt-6 md:mt-8 mx-7 hover:text-[#1877F2] cursor-pointer">
+                Study in USA
+              </p>
+              <p className="text-[#585656] font-2 mt-2 md:mt-3 mx-7">
+                Experience academic excellence with the world’s most advanced internet and technology structure in the US.
+              </p>
+              <p className="mt-2.5 mx-7 text-[#1877F2] underline hover:text-[#3e5b95] cursor-pointer">Learn More</p>
+            </div>
+            {/* UK */}
+            <div className="flex flex-col shadow-gray-300 shadow-xl w-[92.5vw] md:w-[17.65vw] h-108 md:rounded-2xl rounded-xl">
+              <img src={UK_abroad} className="w-[92.5vw] h-60 md:w-80 md:h-45 rounded-t-xl"></img>
+              <img
+                src={UK_flag}
+                className="absolute w-15   h-15 object-cover rounded-full border-5 border-white mt-48 ml-68 md:mt-33 md:ml-45  shadow-gray-300 shadow-sm"
+              ></img>
+              <p className="text-[#344871] text-2xl font-bold mt-6 md:mt-8 mx-7 hover:text-[#1877F2] cursor-pointer">
+                Study in UK
+              </p>
+              <p className="text-[#585656] font-2 mt-2 md:mt-3 mx-7">
+                Plenty of research facilities and even more opportunities to explore your career options in the UK.
+              </p>
+              <p className="mt-2.5 mx-7 text-[#1877F2] underline hover:text-[#3e5b95] cursor-pointer">Learn More</p>
+            </div>
         </div>
       </div>
     </>
