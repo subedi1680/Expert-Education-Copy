@@ -11,6 +11,9 @@ import Canada_flag from "../assets/ca.svg";
 import USA_flag from "../assets/us.svg";
 import UK_flag from "../assets/gb.svg";
 import Global_branches from "../assets/EEVS-Global-Branches-Map.png";
+import Goal_1 from "../assets/commence-with-your-goals.jpg";
+import Goal_2 from "../assets/commence-with-your-goals-2.jpg";
+import { Play } from "lucide-react";
 
 function Home() {
   return (
@@ -142,7 +145,7 @@ function Home() {
       </div>
       {/* consultancy descrive text */}
       <div className=" relative flex flex-col justify-between items-center text-[21px]/8.25 text-white bg-[#1877F2] z-20 -mt-[72px] md:mt-0">
-        <div className="px-[15px] text-balance md:w-[76vw] pt-17.5">
+        <div className="px-[15px] md:w-[76vw] pt-17.5">
           We provide students with the {""}
           <span className="hover:text-[#324B78] hover:cursor-pointer duration-300">
             <b>best consultancy in Nepal</b>
@@ -153,7 +156,7 @@ function Home() {
           <b>600 education institutions</b> in Australia, Canada, the UK and the
           US to guide your way to the college or university you prefer.
         </div>
-        <div className="px-[15px] text-balance md:w-[76vw] mt-5 mb-17.5">
+        <div className="px-[15px] md:w-[76vw] mt-5 mb-17.5">
           It is time to take a step in the right direction with Expert
           Education, your reliable and{" "}
           <span className="hover:text-[#324B78] hover:cursor-pointer duration-300">
@@ -301,16 +304,66 @@ function Home() {
             </div>
             <div className="flex flex-col items-center">
               <div className="flex flex-row md:flex-col items-center">
-              <p className="text-[#abb2c0] font-semibold text-[0.8em]">
-                ENROLLED IN
-              </p>
-              <p className="text-[#abb2c0] font-semibold text-[0.8em]">
-                {" "}
-                IELTS/PTE PREPARATION CLASSES
-              </p>
+                <p className="text-[#abb2c0] font-semibold text-[0.8em]">
+                  ENROLLED IN
+                </p>
+                <p className="text-[#abb2c0] font-semibold text-[0.8em]">
+                  {" "}
+                  IELTS/PTE PREPARATION CLASSES
+                </p>
               </div>
               <p className="md:text-5xl font-bold text-3xl">40,000+</p>
             </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Goals section */}
+      <div className="h-screen flex flex-row w-295 ml-35 mt-12">
+        <div className="flex flex-col flex-1 p-10">
+          <p className="text-[#344871] text-5xl font-bold">
+            Commence with your goals
+          </p>
+          <p className="text-[#5a5a5a] text-[21px] mt-6">
+            Expert Education offers you the best education consultancy in Nepal.
+          </p>
+          <div className="flex flex-row items-center mt-5">
+            <Play fill="#1877f2" stroke="#1877f2" size="10" />
+            <p className="ml-4 text-[#1877f2] font-bold text-lg">
+              Visa consultation
+            </p>
+          </div>
+          <p className="pl-7 text-[#5a5a5a] text-[18px]">
+            We provide professional visa consulting experts to assist you with
+            all details and requirements specific to your goals.
+          </p>
+          <div className="flex flex-row items-center mt-5">
+            <Play fill="#1877f2" stroke="#1877f2" size="10" />
+            <p className="ml-4 text-[#1877f2] font-bold text-lg">
+              Admissions advice
+            </p>
+          </div>
+          <p className="pl-7 text-[#5a5a5a] text-[18px]">
+            We’ll guide you from the very beginning till you gain admission in a
+            college or university suitable to you.
+          </p>
+          <div className="flex flex-row items-center mt-5">
+            <Play fill="#1877f2" stroke="#1877f2" size="10" />
+            <p className="ml-4 text-[#1877f2] font-bold text-lg">
+              Travel and stay
+            </p>
+          </div>
+          <p className="pl-7 text-[#5a5a5a] text-[18px]">
+            Need the best accommodation while studying abroad? We’ve got you
+            covered.
+          </p>
+        </div>
+        <div className="flex flex-col flex-1 mt-10">
+          <div>
+            <img src={Goal_1} className="w-92 h-92 rounded-md"></img>
+          </div>
+          <div className="absolute mt-51 ml-47">
+            <img src={Goal_2} className="w-92 h-68 rounded-md"></img>
           </div>
         </div>
       </div>
