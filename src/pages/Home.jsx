@@ -369,10 +369,10 @@ function Home() {
         </div>
       </div>
       {/* get top education consultancy */}
-      <div className="bg-[#1877f2] h-93 pt-18 pl-35">
-        <div className="w-300 flex flex-row justify-between items-center">
+      <div className="bg-[#1877f2] md:h-93 md:pt-18 md:pl-35 h-140 pt-18">
+        <div className="md:w-300 flex flex-col md:flex-row justify-between items-center">
           <div className="flex flex-col flex-2 p-7">
-            <div className="text-white text-5xl font-bold">
+            <div className="text-white text-4xl md:text-5xl font-bold">
               There’s a University waiting to fulfil your study goals
             </div>
             <div className="text-white text-lg font-semibold mt-3">
@@ -380,7 +380,7 @@ function Home() {
               admissions process, scholarships, etc.
             </div>
           </div>
-          <div className="flex flex-row border border-white rounded-xl py-5 px-5 space-x-2 items-center w-82">
+          <div className="flex flex-row border border-white rounded-xl py-5 px-5 space-x-2 md:items-center w-82">
             <button className="text-white text-md  font-bold">
               Get top education consultancy in Nepal
             </button>
