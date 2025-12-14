@@ -14,6 +14,7 @@ import Global_branches from "../assets/EEVS-Global-Branches-Map.png";
 import Goal_1 from "../assets/commence-with-your-goals.jpg";
 import Goal_2 from "../assets/commence-with-your-goals-2.jpg";
 import { Play } from "lucide-react";
+import { ArrowRight} from "lucide-react"
 
 function Home() {
   return (
@@ -319,9 +320,9 @@ function Home() {
       </div>
 
       {/* Goals section */}
-      <div className="h-screen flex flex-row w-295 ml-35 mt-12">
-        <div className="flex flex-col flex-1 p-10">
-          <p className="text-[#344871] text-5xl font-bold">
+      <div className="flex flex-col md:flex-row md:w-295 md:ml-35 md:mt-12">
+        <div className="flex flex-col md:flex-1 md:p-10 mt-12 ml-3 md:mt-0 md:ml-3">
+          <p className="text-[#344871] text-4xl md:text-5xl font-bold">
             Commence with your goals
           </p>
           <p className="text-[#5a5a5a] text-[21px] mt-6">
@@ -333,7 +334,7 @@ function Home() {
               Visa consultation
             </p>
           </div>
-          <p className="pl-7 text-[#5a5a5a] text-[18px]">
+          <p className="pl-7 text-[#5a5a5a] md:text-[18px] text-[19px]">
             We provide professional visa consulting experts to assist you with
             all details and requirements specific to your goals.
           </p>
@@ -343,7 +344,7 @@ function Home() {
               Admissions advice
             </p>
           </div>
-          <p className="pl-7 text-[#5a5a5a] text-[18px]">
+          <p className="pl-7 text-[#5a5a5a] md:text-[18px] text-[19px]">
             We’ll guide you from the very beginning till you gain admission in a
             college or university suitable to you.
           </p>
@@ -353,20 +354,41 @@ function Home() {
               Travel and stay
             </p>
           </div>
-          <p className="pl-7 text-[#5a5a5a] text-[18px]">
+          <p className="pl-7 text-[#5a5a5a] md:text-[18px] text-[20px]">
             Need the best accommodation while studying abroad? We’ve got you
             covered.
           </p>
         </div>
-        <div className="flex flex-col flex-1 mt-10">
+        <div className="relative flex flex-col flex-1 md:mt-10 ml-4 mt-6 pb-50 md:pb-70">
           <div>
-            <img src={Goal_1} className="w-92 h-92 rounded-md"></img>
+            <img src={Goal_1} className="w-90 md:w-92 h-92 rounded-md"></img>
           </div>
-          <div className="absolute mt-51 ml-47">
-            <img src={Goal_2} className="w-92 h-68 rounded-md"></img>
+          <div className="absolute mt-54 md:mt-51 md:ml-47">
+            <img src={Goal_2} className="w-87 md:w-92 h-68 rounded-md"></img>
           </div>
         </div>
       </div>
+      {/* get top education consultancy */}
+      <div className="bg-[#1877f2] h-93 pt-18 pl-35">
+        <div className="w-300 flex flex-row justify-between items-center">
+          <div className="flex flex-col flex-2 p-7">
+            <div className="text-white text-5xl font-bold">
+              There’s a University waiting to fulfil your study goals
+            </div>
+            <div className="text-white text-lg font-semibold mt-3">
+              Get expert advice on choosing education institutes, addressing the
+              admissions process, scholarships, etc.
+            </div>
+          </div>
+          <div className="flex flex-row border border-white rounded-xl py-5 px-5 space-x-2 items-center w-82">
+            <button className="text-white text-md  font-bold">
+              Get top education consultancy in Nepal
+            </button>
+            <ArrowRight color="white" size="40"/>
+          </div>
+        </div>
+      </div>
+      <div className=""></div>
     </>
   );
 }
