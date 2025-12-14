@@ -1,4 +1,4 @@
-import Navbar from "../components/Navbar"
+import Navbar from "../components/Navbar";
 import Australia_abroad from "../assets/study-abroad-in-australia-800x533.jpg";
 import Canada_abroad from "../assets/Study-abroad-in-canada-800x533.jpg";
 import USA_abroad from "../assets/Study-abroad-in-USA-800x533.jpg";
@@ -11,12 +11,37 @@ import Global_branches from "../assets/EEVS-Global-Branches-Map.png";
 import Goal_1 from "../assets/commence-with-your-goals.jpg";
 import Goal_2 from "../assets/commence-with-your-goals-2.jpg";
 import { Play } from "lucide-react";
-import { ArrowRight} from "lucide-react"
+import { ArrowRight } from "lucide-react";
 
 function Home() {
   return (
     <>
-      <Navbar/>
+      {/* nav bar and background image */}
+      <div className="relative bg-[url(assets/home_expert_image.png)] bg-cover bg-center h-[450px] md:h-[600px] flex flex-col backdrop-blur-3xl md:w-full z-10">
+        <Navbar />
+        <div className="flex flex-col mt-20 md:mt-12 ml-7 md:ml-30 text-white">
+          <div className="underline underline-offset-8  md:underline-offset-10 decoration-1 font-extrabold text-sm md:tracking-[.5em] tracking-[.25em]">
+            EXPERT EDUCATION
+          </div>
+          <div className="text-4xl md:text-5xl font-bold mt-3 md:mt-9 tracking-[0.06em] md:tracking-[0em]">
+            Explore your
+          </div>
+          <div className="text-4xl md:text-5xl font-bold md:mt-2 tracking-[0.07em] md:tracking-[0em]">
+            Dreams Overseas
+          </div>
+          <div className="flex flex-row justify-start items-center text-md mt-3 space-x-1">
+            <div className="hidden md:flex">
+              <CircleChevronRight strokeWidth="1" size="40" />
+            </div>
+            <div className="flex md:hidden">
+              <CircleChevronRight strokeWidth="1" size="25" />
+            </div>
+            <div className="font-semibold md:tracking-widest text-[12px] md:text-[16px]">
+              Discover your options
+            </div>
+          </div>
+        </div>
+      </div>
       {/* consultancy descrive text */}
       <div className=" relative flex flex-col justify-between items-center text-[21px]/8.25 text-white bg-[#1877F2] z-20 -mt-[72px] md:mt-0">
         <div className="px-[15px] md:w-[76vw] pt-17.5">
@@ -257,15 +282,12 @@ function Home() {
             <button className="text-white text-md  font-bold">
               Get top education consultancy in Nepal
             </button>
-            <ArrowRight color="white" size="40"/>
+            <ArrowRight color="white" size="40" />
           </div>
         </div>
       </div>
-
       {/* clients review */}
-      <div>
-
-      </div>
+      <div></div>
     </>
   );
 }
