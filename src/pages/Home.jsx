@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Navbar from "../components/Navbar";
 import Australia_abroad from "../assets/study-abroad-in-australia-800x533.jpg";
 import Canada_abroad from "../assets/Study-abroad-in-canada-800x533.jpg";
@@ -12,8 +13,60 @@ import Goal_1 from "../assets/commence-with-your-goals.jpg";
 import Goal_2 from "../assets/commence-with-your-goals-2.jpg";
 import { Play } from "lucide-react";
 import { ArrowRight } from "lucide-react";
+import Cards from "../components/Cards";
+import Pagination from "../components/Pagination";
+import Profile1 from "../assets/profile_1-300x300.png";
+import Profile2 from "../assets/profile_2-300x300.png";
+import FiveStar from "../assets/five_star.png";
+import { CircleChevronRight } from "lucide-react";
+
+const reviews = [
+  {
+    number: "66",
+    name: "Prawesh Belbase",
+    description:
+      "I'm thrilled my Canadian student visa was approved, and Expert lived up to their name in every way. Their expertise made this complex process much easier.",
+    review_image: FiveStar,
+  },
+  {
+    number: "66",
+    name: "Ankita Karki",
+    description:
+      "My overall journey with expert was smooth and easy. My counselors Biniya Khadgi and Preeti Neupane was very supportive and helped me understand how the process works which is why we were able to get through it properly. With the immense help of them I have received my Australian student visa with so much ease. Very grateful for this experience.",
+    review_image: FiveStar,
+  },
+  {
+    image: Profile1,
+    name: "Kritisha Pandey",
+    description:
+      "Great service, very knowledgeable and helpful staff. Extremely reliable and trustworthy consultancy. One of the best consultancy I have ever come through. Received very helpful advice throughout my visa process. I would strongly recommend international students to get advice from Expert education and Prashanna dai for their future plan.",
+    review_image: FiveStar,
+  },
+  {
+    image: Profile2,
+    name: "Pratikshya Bhandari",
+    description:
+      "Very happy with the work of expert education and visa consaltancy. Very overwhelming and experienced staffs. Good professionalism. Quality services. Good and comfortable environment.",
+    review_image: FiveStar,
+  },
+];
 
 function Home() {
+  const [currentPage, setCurrentPage] = useState(1);
+  const reviewsPerPage = 3;
+  const totalPages = Math.max(1, reviews.length - reviewsPerPage + 1);
+  const startIndex = currentPage - 1;
+  const endIndex = startIndex + reviewsPerPage;
+  const currentReviews = reviews.slice(startIndex, endIndex);
+
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
+    const reviewsSection = document.getElementById("reviews-section");
+    if (reviewsSection) {
+      reviewsSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <>
       {/* nav bar and background image */}
@@ -286,8 +339,41 @@ function Home() {
           </div>
         </div>
       </div>
+
       {/* clients review */}
-      <div></div>
+      <div id="reviews-section" className="bg-[#f5f8fb]">
+        <p className="text-center text-[#344871] font-bold text-5xl pt-18 pb-15">
+          What our clients love about us
+        </p>
+        <div className="flex flex-col items-center pb-10">
+          <div className="flex flex-col md:flex-row md:space-x-10 space-y-6 md:space-y-0 justify-center items-start pb-10 px-4">
+            {currentReviews.map((review, index) => (
+              <Cards
+                key={startIndex + index}
+                number={review.number}
+                image={review.image}
+                name={review.name}
+                description={review.description}
+                review_image={review.review_image}
+              />
+            ))}
+          </div>
+
+          {/* Pagination Component */}
+          <Pagination
+            currentPage={currentPage}
+            totalPages={totalPages}
+            onPageChange={handlePageChange}
+            showFirstLast={true}
+            maxVisiblePages={5}
+          />
+        </div>
+      </div>
+
+      {/* footer */}
+      <div>
+        
+      </div>
     </>
   );
 }
