@@ -19,6 +19,8 @@ import Profile1 from "../assets/profile_1-300x300.png";
 import Profile2 from "../assets/profile_2-300x300.png";
 import FiveStar from "../assets/five_star.png";
 import { CircleChevronRight } from "lucide-react";
+import Footer from "../components/Footer"
+
 
 const reviews = [
   {
@@ -60,12 +62,9 @@ function Home() {
   const currentReviews = reviews.slice(startIndex, endIndex);
 
   const handlePageChange = (page) => {
-    setCurrentPage(page);
-    const reviewsSection = document.getElementById("reviews-section");
-    if (reviewsSection) {
-      reviewsSection.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+  setCurrentPage(page);
+};
+
 
   return (
     <>
@@ -346,7 +345,7 @@ function Home() {
           What our clients love about us
         </p>
         <div className="flex flex-col items-center pb-10">
-          <div className="flex flex-col md:flex-row md:space-x-10 space-y-6 md:space-y-0 justify-center items-start pb-10 px-4">
+          <div className="flex flex-col md:flex-row md:space-x-10 space-y-6 md:space-y-0 justify-center items-start pb-2 px-4">
             {currentReviews.map((review, index) => (
               <Cards
                 key={startIndex + index}
@@ -371,9 +370,8 @@ function Home() {
       </div>
 
       {/* footer */}
-      <div>
-        
-      </div>
+      <Footer/>
+      
     </>
   );
 }
