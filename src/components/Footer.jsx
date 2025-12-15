@@ -56,18 +56,18 @@ function Footer() {
               <Facebook
                 fill="white"
                 size="35"
-                className="border rounded-xl p-2"
+                className="border border-[#3e3f53] rounded-xl p-2"
               />
-              <Instagram size="35" className="border rounded-sm p-2" />
+              <Instagram size="35" className="border border-[#3e3f53] rounded-sm p-2" />
               <Linkedin
                 fill="white"
                 size="35"
-                className="border rounded-xl p-2"
+                className="border border-[#3e3f53] rounded-xl p-2"
               />
               <Twitter
                 fill="white"
                 size="35"
-                className="border rounded-xl p-2"
+                className="border border-[#3e3f53] rounded-xl p-2"
               />
             </div>
             <div className="mt-10">

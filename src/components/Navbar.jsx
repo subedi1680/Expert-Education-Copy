@@ -94,9 +94,6 @@ function Navbar() {
                 </li>
               </ul>
             </li>
-            <li className="hover:bg-[#186FE9] cursor-pointer px-2.75 py-8 duration-200">
-              NPL PREDICT & WIN
-            </li>
           </ul>
         </div>
         <div className="md:flex hidden items-center border-l border-[#3A52B0] pl-10 pr-1">
