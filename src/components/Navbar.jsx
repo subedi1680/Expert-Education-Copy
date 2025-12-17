@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import expertLogo from "../assets/expert_logo.png";
 import { Search } from "lucide-react";
 import { CircleChevronRight } from "lucide-react";
@@ -6,20 +7,24 @@ import { Menu } from "lucide-react";
 function Navbar() {
   return (
     <>
-      <nav className="flex flex-wrap justify-between border-b border-[#3A52B0] pl-10 pr-4 md:px-10">
+      <nav className="flex flex-wrap justify-between border-b border-[#95afd9] pl-10 pr-4 md:px-10">
         <div className="my-3 -mx-6 md:mx-3">
-          <img src={expertLogo} className="h-15 "></img>
+          <Link to="/">
+            <img src={expertLogo} className="h-15 "></img>
+          </Link>
         </div>
         <div className="px-11 flex-1">
           <ul className="hidden space-x-1 md:flex flex-row text-white text-sm font-bold justify-end">
             <li className="group hover:bg-[#186FE9] cursor-pointer px-2.75 py-8 duration-200 relative">
-              <span>ABOUT US</span>
+              <Link to="/about">
+                <span>ABOUT US</span>
+              </Link>
               <ul className="absolute top-full left-0 hidden group-hover:flex flex-col bg-white text-[#4b5c81] w-63 text-md font-medium">
                 <li className="px-4 py-4 hover:bg-[#2165D6] hover:text-white cursor-pointer border-b border-gray-200">
-                  About Expert
+                  <Link to="/about">About Expert</Link>
                 </li>
                 <li className="px-4 py-4 hover:bg-[#2165D6] hover:text-white cursor-pointer border-b border-gray-200">
-                  Message from Director
+                  <Link to="/about/message-from-director">Message from Director</Link>
                 </li>
               </ul>
             </li>
@@ -96,7 +101,7 @@ function Navbar() {
             </li>
           </ul>
         </div>
-        <div className="md:flex hidden items-center border-l border-[#3A52B0] pl-10 pr-1">
+        <div className="md:flex hidden items-center border-l border-[#95afd9] pl-10 pr-1">
           <Search color="white" />
         </div>
         <div className="flex md:hidden items-center">
