@@ -29,7 +29,7 @@ function Navbar() {
               </ul>
             </li>
             <li className="group hover:bg-[#186FE9] cursor-pointer px-2.75 py-8 duration-200 relative">
-              <span>STUDY ABROAD</span>
+              <span><Link to="/services/study-abroad">STUDY ABROAD</Link></span>
               <ul className="absolute top-full left-0 hidden group-hover:flex flex-col bg-white text-[#4b5c81] w-63 text-md font-medium">
                 <li className="px-4 py-4 hover:bg-[#2165D6] hover:text-white cursor-pointer border-b border-gray-200">
                   Study in Australia
@@ -62,9 +62,6 @@ function Navbar() {
                 </li>
                 <li className="px-4 py-4 hover:bg-[#2165D6] hover:text-white cursor-pointer border-b border-gray-200">
                   Student Health Insurance
-                </li>
-                <li className="px-4 py-4 hover:bg-[#2165D6] hover:text-white cursor-pointer border-b border-gray-200">
-                  Banking in Australia
                 </li>
               </ul>
             </li>
